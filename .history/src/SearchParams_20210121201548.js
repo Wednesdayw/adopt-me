@@ -22,10 +22,10 @@ const SearchParams = () => {
     setPets(animals || []);
   }
 
+
   useEffect(() => {
     updateBreeds([]);
     updateBreed("");
-
     pet.breeds(animal).then(({ breeds }) => {
       const breedStrings = breeds.map(({ name }) => name);
       updateBreeds(breedStrings);
@@ -34,8 +34,7 @@ const SearchParams = () => {
 
   return (
     <div className="search-params">
-   
-      <form
+        <form
         onSubmit={e => {
           e.preventDefault();
           requestPets();
@@ -54,7 +53,6 @@ const SearchParams = () => {
         <BreedDropdown />
         <button>Submit</button>
       </form>
-      <Results pets={pets} />
     </div>
   );
 };

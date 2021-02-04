@@ -29,12 +29,10 @@ const SearchParams = () => {
     pet.breeds(animal).then(({ breeds }) => {
       const breedStrings = breeds.map(({ name }) => name);
       updateBreeds(breedStrings);
-    }, console.error);
-  }, [animal]);
+@@ -19,7 +34,12 @@ const SearchParams = () => {
 
   return (
     <div className="search-params">
-   
       <form
         onSubmit={e => {
           e.preventDefault();
@@ -44,13 +42,7 @@ const SearchParams = () => {
         <label htmlFor="location">
           Location
           <input
-            id="location"
-            value={location}
-            placeholder="Location"
-            onChange={e => updateLocation(e.target.value)}
-          />
-        </label>
-        <AnimalDropdown />
+@@ -33,6 +53,7 @@ const SearchParams = () => {
         <BreedDropdown />
         <button>Submit</button>
       </form>
@@ -58,5 +50,4 @@ const SearchParams = () => {
     </div>
   );
 };
-
 export default SearchParams;

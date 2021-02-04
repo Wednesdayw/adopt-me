@@ -20,5 +20,3 @@ const Pet = props => {
     </a>
   );
 };
-
-export default Pet;

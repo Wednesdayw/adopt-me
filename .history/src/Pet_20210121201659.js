@@ -20,5 +20,4 @@ const Pet = props => {
     </a>
   );
 };
-
-export default Pet;
+    //These are all just React.createElement calls
